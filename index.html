@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Happy 21st Birthday Monisha ❤️</title>
+<title>Happy Birthday Monisha</title>
 
 <style>
 
@@ -13,55 +11,49 @@ margin:0;
 font-family:Segoe UI;
 text-align:center;
 color:white;
-background: linear-gradient(270deg,#ff4e50,#ff6a88,#ff99ac,#ffc3a0);
+background:linear-gradient(270deg,#ff416c,#ff4b2b,#ff6a88,#ff99ac);
 background-size:600% 600%;
 animation:bg 8s infinite;
+overflow:hidden;
 }
 
 @keyframes bg{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-.container{
-padding:20px;
-margin-top:20px;
+0%{background-position:0%}
+50%{background-position:100%}
+100%{background-position:0%}
 }
 
 h1{
-font-size:42px;
-text-shadow:2px 2px 10px black;
+font-size:45px;
+text-shadow:0 0 20px black;
 }
 
 h2{
-font-size:28px;
+font-size:30px;
 }
 
 img{
 width:260px;
 border-radius:20px;
-border:6px solid white;
-margin-top:15px;
+border:5px solid white;
 box-shadow:0 0 20px white;
+margin-top:20px;
 }
 
 p{
 font-size:18px;
-padding:10px;
-max-width:600px;
+width:80%;
 margin:auto;
 }
 
 button{
-padding:12px 25px;
+padding:15px 25px;
 font-size:18px;
 border:none;
 border-radius:10px;
 background:white;
 color:red;
-cursor:pointer;
-margin-top:15px;
+margin-top:20px;
 }
 
 button:hover{
@@ -69,16 +61,21 @@ background:pink;
 }
 
 #msg{
-font-size:26px;
+font-size:25px;
 color:yellow;
 margin-top:20px;
-font-weight:bold;
 }
 
-footer{
-margin-top:40px;
-font-size:14px;
-opacity:0.8;
+.heart{
+position:fixed;
+color:red;
+font-size:20px;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{top:-10%}
+100%{top:110%}
 }
 
 </style>
@@ -87,44 +84,36 @@ opacity:0.8;
 
 <body>
 
-<!-- SONG -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/0G2VxhV_gXM?autoplay=1&loop=1&playlist=0G2VxhV_gXM"
-allow="autoplay">
-</iframe>
-
-<div class="container">
-
 <h1>Happy 21st Birthday ❤️</h1>
 
 <h2>Monisha H 👑</h2>
 
-<img src="https://i.imgur.com/3ZQ3Z4R.png">
+<img src="photo.jpg">
 
 <p>
 Happy 21st Birthday my love ❤️  
-You are the most beautiful person in my life.  
-Your smile makes my world bright.  
-On this special day I promise to love you forever,  
-care for you forever, and stay with you forever.  
-You are my heart, my happiness, my everything.
+You are my happiness, my heart, my life.  
+I promise to stay with you forever.
 </p>
 
-<button onclick="showMsg()">Click for Surprise 🎁</button>
+<button onclick="show()">Click for Surprise 🎁</button>
 
 <div id="msg"></div>
 
-<footer>
-Made with ❤️ for Monisha
-</footer>
-
-</div>
-
 <script>
 
-function showMsg(){
+function show(){
 document.getElementById("msg").innerHTML =
-"I LOVE YOU FOREVER MONISHA ❤️ HAPPY 21st BIRTHDAY MY QUEEN 👑";
+"I LOVE YOU MONISHA ❤️ FOREVER";
+}
+
+for(let i=0;i<20;i++){
+let h=document.createElement("div");
+h.innerHTML="❤️";
+h.className="heart";
+h.style.left=Math.random()*100+"%";
+h.style.animationDuration=3+Math.random()*5+"s";
+document.body.appendChild(h);
 }
 
 </script>
